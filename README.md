@@ -3,13 +3,13 @@
 Students involved in this project: Emir Sultan , Mersiha Baltic
 Module: Operating Systems
 
-*******************************************************
+
 
 ## Files/Directories
 README.md: Information about our project
 shell.c: the full c program in one c file
 
-*******************************************************
+
 
 ## An outline of our project
 
@@ -27,13 +27,13 @@ We have created a simple shell program that can run on linux systems. I will now
 
 - Main Loop--> The main loop continuously prompts the user for input, processes the input string, and executes the commands accordingly.
 
-*******************************************************
+
 
 ## Challenges that we have encoutered during the creation of this custom shell
 
 The main challenges of creating a project like this was really trying to understand the fork() and forkbomb() functions. Also we had a difficult time with analysing and creating functions with anything that's related to piping. We found that a bit more advanced but we managed to pull through with some extra work. Some other challenges involved trying to learn C as it is a new programming language for us. Also we did not now how to put all these different functions such as main and execute into different C files and still make the shell work effeciently. To counter this we just made a massive c file with everything included in it. I hope you understand.
 
-*******************************************************
+
 
 ## Main sources that we used for the project
 
@@ -48,7 +48,7 @@ iv) https://brennan.io/2015/01/16/write-a-shell-in-c/
 
 v) We also used GPT a lot and other ai for help. This was a bit more advanced project and we found it somewhat difficult so you will probably find a lot of our code being like that of online examples, but we tried to change and implement our own one as much as possible.
 
-*******************************************************
+
 
 ## Answers to the questions of task 1.5
 
