@@ -13,6 +13,11 @@ shell.c: the full c program in one c file
 
 ## An outline of our project
 
+NOTE -- To run and compile our custom shell you need to go to the terminal and write
+gcc shell.c -lreadline 
+./a.out
+
+
 We have created a simple shell program that can run on linux systems. I will now go into all the functionalities in detail.
 - initialization --> the init_shell() function is called to clear the screen and display a message when the shell starts up. It also shows the current user. Also, I have put a sleep function so the text on the display remains for a second then disappears with the clear function after that.
 - Input Handling --> the takeInput() function is esponsible for reading input from the user using the readline() function provided by the readline library. It also maintains command history. 
