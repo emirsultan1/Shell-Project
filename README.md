@@ -14,6 +14,7 @@ shell.c: the full c program in one c file
 ## An outline of our project
 
 NOTE -- To run and compile our custom shell you need to go to the terminal and write
+
 gcc shell.c -lreadline 
 
 ./a.out
