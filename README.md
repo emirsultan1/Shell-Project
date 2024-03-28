@@ -89,3 +89,39 @@ Now assuming that this is the only process that the CPU is executing, the follow
 4) Running State: The process resumes the running state after waiting is completed.
 5) Terminated State: After completing its execution, the process moves to the terminated state, where it is cleaned up by the operating system.
 
+## Some issues we had with the project
+
+To be honest we were discouraged to actually implement the forkbomb into our shell project as we were afraid it would destroy our pc's. Instead i will provide the code for the forkbomb if I were to implement it. Code it below------>
+
+I would have to set a max_processes above next to my libraries. I have to set a reasonable number like maybe 5 or 10. I would also define a forkbomb delay where there is a delay between forks to ease the system.
+
+
+
+#define MAX_FORKBOMB_PROCESSES 5  // Limit the maximum number of processes
+#define FORKBOMB_DELAY 1  // Delay in seconds between forks, to ease the system load
+
+void controlledForkbomb() {
+    printf("Launching a controlled forkbomb... Please be cautious.\n");
+    int createdProcesses = 0;
+
+    for (createdProcesses = 0; createdProcesses < MAX_FORKBOMB_PROCESSES; ++createdProcesses) {
+        pid_t pid = fork();
+
+        if (pid == 0) {
+            // Child process
+            printf("Child process created: %d\n", getpid());
+            sleep(FORKBOMB_DELAY);  // Sleep to simulate work and slow down forking
+            exit(0);  // Child exits
+        } else if (pid > 0) {
+            // Parent process
+            printf("Parent process, created a child: %d\n", pid);
+            sleep(FORKBOMB_DELAY);  // Parent waits before potentially forking again
+        } else {
+            // Fork failed
+            perror("Fork failed");
+            break;
+        }
+    }
+
+    printf("Controlled forkbomb completed. Created %d processes.\n", createdProcesses);
+}
